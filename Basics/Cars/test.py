@@ -17,8 +17,16 @@ if __name__ == "__main__":
 
     cars = get_car_list('cars.csv')
     print(len(cars))
+    # print(cars)
 
-    for car in cars:
-        print(car)
-    print(cars[0].passenger_seats_count)
-    print(cars[1].get_body_volume())
+    # for car in cars:
+        # print(car.photo_file_name)
+    
+    # print(cars[0].passenger_seats_count)
+    # print(cars[1].get_body_volume())
+    # print(vars(cars[0]))
+    # print(vars(cars[1]))
+    # print(vars(cars[2]))
+    # print(vars(cars[3]))
+    # print(vars(cars[4]))
+    # print(hasattr(cars[1], 'extra'))
