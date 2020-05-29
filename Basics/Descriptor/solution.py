@@ -7,9 +7,7 @@ class File:
 
     def __init__(self, filepath):
         self.counter = 0
-        self.root_dir = tempfile.gettempdir()
         self.path = filepath
-        # self.path = os.path.join(self.root_dir, filename)
         if not os.path.exists(self.path):
             with open(self.path, 'w') as f:
                 f.write('')
