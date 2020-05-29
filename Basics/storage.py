@@ -5,11 +5,13 @@ import json
 from io import StringIO
 from functools import reduce
 
+
 def conc(a, b):
     return a + ", " + b
 
+
 def write_json(data, filename): 
-    with open(filename,'w') as f: 
+    with open(filename, 'w') as f: 
         json.dump(data, f, indent=4) 
 
 
@@ -25,7 +27,7 @@ if __name__ == "__main__":
     if (not os.path.exists(storage_path)):
         with open(storage_path, 'w') as f:
             json.dump({}, f)
-    
+
     if (args.key and args.val):
         with open(storage_path) as f:
             data = json.load(f)
@@ -34,7 +36,7 @@ if __name__ == "__main__":
             for key in all_keys:
                 if (key==args.key):
                     key_exist = True
-            
+
             if (not key_exist):
                 data[args.key] = [args.val]
                 write_json(data, storage_path)
